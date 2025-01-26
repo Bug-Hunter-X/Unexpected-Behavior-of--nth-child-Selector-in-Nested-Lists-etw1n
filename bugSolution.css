@@ -1,0 +1,11 @@
+The solution uses the `:nth-child` selector recursively or utilizes a different approach that considers nested lists. A recursive solution can be complex and not always ideal. A more practical solution is to use a different selector such as the `.querySelector` method within javascript or a different CSS selector that works directly with nested lists or more specifically use the `:nth-of-type` selector.
+
+Here's an example of using a more specific selector that takes nested elements into account:
+
+```css
+#myList ul li:nth-of-type(2) {
+  background-color: yellow; 
+}
+```
+
+This is better because `:nth-of-type` selects elements based on their type within the parent element, providing more predictable results when dealing with nested lists.
