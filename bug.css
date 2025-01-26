@@ -1,0 +1,9 @@
+The following CSS code snippet demonstrates an uncommon issue where the `:nth-child` pseudo-class selector unexpectedly fails to target elements within a nested list:
+
+```css
+#myList ul li:nth-child(2) {
+  background-color: yellow;
+}
+```
+
+This CSS intends to highlight the second list item within nested `<ul>` elements within the element with the ID "myList." However, it will only target the second list item of the outermost `<ul>` and not any nested `<ul>` elements. This is because the `:nth-child` selector operates on direct children of the parent element and doesn't traverse down the nested list structure.
